@@ -26,6 +26,7 @@ namespace CG_2
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 Bin.readBin(dialog.FileName);
+                trackBar1.Maximum = Bin.Z;
                 View.SetupView(glControl1.Width, glControl1.Height);
                 loaded = true;
                 glControl1.Invalidate();
@@ -39,6 +40,11 @@ namespace CG_2
                 View.DrawQuads(currentLayer);
                 glControl1.SwapBuffers();
             }
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            currentLayer = trackBar1.Value;
         }
     }
 }

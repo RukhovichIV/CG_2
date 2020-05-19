@@ -23,6 +23,10 @@ namespace CG_2
         {
             int min = 0, max = 2000;
             int newVal = (value - min) * 255 / (max - min);
+            if (newVal < 0)
+                newVal = 0;
+            if (newVal > 255)
+                newVal = 255;
             return Color.FromArgb(newVal, newVal, newVal);
         }
 
