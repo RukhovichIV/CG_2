@@ -181,6 +181,8 @@
             this.Controls.Add(this.glControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(1320, 931);
+            this.MinimumSize = new System.Drawing.Size(1320, 931);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
